@@ -1,15 +1,17 @@
-import Cabeçalho from "./shared/Cabeçalho"
-import Rodape from "./shared/Rodape"
+import Cabeçalho from "./shared/Cabeçalho";
+import Rodape from "./shared/Rodape";
 
-export default function Layout(props:any) {
-    return(
-        <div className=" flex flex-col">
-            <Cabeçalho />
-            <main className="flex mt-18">
-                {props.children}
+export default function Layout(props: any) {
+  return (
+    <div className=" flex flex-col">
+      <Cabeçalho />
+      <div className="flex justify-center mt-18">
+        <div className="w-[1110px] py-7 ">
+          <main>{props.children}</main>
 
-            </main>
-            <Rodape />
         </div>
-    )
+      </div>
+          <Rodape />
+    </div>
+  );
 }
